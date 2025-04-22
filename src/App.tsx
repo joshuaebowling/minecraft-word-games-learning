@@ -1,10 +1,16 @@
 import "./styles.css";
+import { useState, useEffect } from "react";
+import { createHashRouter as createRouter } from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
+import { routes } from "./routes";
 
 export default function App() {
+  const router = createRouter(routes);
+  const [term, setTerm] = useState<string>("choo choo");
+
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+      <RouterProvider router={router}></RouterProvider>
     </div>
   );
 }

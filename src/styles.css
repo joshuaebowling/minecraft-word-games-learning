@@ -2,3 +2,10 @@
   font-family: sans-serif;
   text-align: center;
 }
+
+.shownames__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+  grid-template-rows: 1fr; /* One row */
+  gap: 10px; /* Optional: Adds space between grid items */
+}
